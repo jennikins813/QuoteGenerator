@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="header">Random quote generator</div>
+
+        <div class="center"><button type="button" class ="button" style="vertical-align:middle"><span>Generate Quote</span></button></div>
+
+        <div id="container"></div><div id="author"></div>
+    </div>
+
+    <script>
+    var quotes = [
+        {author: 'Mahatma Gandhi', quote: 'Among the many misdeeds of the British rule in India, history will look upon the act depriving a whole nation of arms as the blackest.'},
+        {author: 'Ernest Hemingway', quote: 'The first draft of anything is shit.'},
+        {author: 'Victor Hugo', quote: 'He had the confidence of a man who had never been wounded.'},
+        {author: "Stephen King", quote: "I think that marijuana should not only be legal, I think it should be a cottage industry. It would be wonderful for the state of Maine. There's some pretty good homegrown dope. I'm sure it would be even better if you could grow it with fertilizers and have greenhouses."},
+        {author: 'Henry David Thoreau', quote: 'Things do not change we change.'},
+        {author: "Thomas Carlyle", quote: "I've got a great ambition to die of exhaustion rather than boredom."},
+        {author: "Bel Pesce", quote: "Your overnight success story is always a result of everything you have done in your life until that moment."}
+    ];
+
+    $(":button").click(function() {
+        $("#container").empty();
+        $("#author").empty();
+    var random = quotes[Math.floor(Math.random() * quotes.length)];
+    $("#container").append(displayQuote(random));
+    $("#author").append(displayAuthor(random));
+    // $("#container").append("<img src=https://theysaidso.com/img/bgs/hang_on_building_top.jpg>")
+    // $(".body").css("background-image", "url(https://theysaidso.com/img/bgs/hang_on_building_top.jpg)");
+    // $(".body").css("img", "url(http://placehold.it/350x150)");
+    });
+
+
+    var displayQuote = function(obj) {
+    $('#container').append(obj.quote);
+    }
+    var displayAuthor = function(obj) {
+    $('#author').append(" - " + obj.author);
+    }
+    </script>
+</body>
+</html>

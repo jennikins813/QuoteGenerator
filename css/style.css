@@ -1,0 +1,85 @@
+.center {
+  text-align: center;
+  margin: auto;
+  padding: 30px;
+}
+
+.header {
+  text-align: center;
+  margin: auto;
+  font-family: "Didot";
+  padding: 30px;
+  font-size: 50px;
+  font-style: bold;
+}
+
+#container {
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  font-family: "Didot";
+  padding: 20px;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+#author {
+  text-align: center;
+  margin: auto;
+  font-family: "Didot";
+  font-style: italic;
+  padding: 10px;
+  color: #FFFFFF;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #008CBA;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '>>';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 40px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.body {
+  width: 70%;
+  border-style: solid;
+  border-width: 2px;
+  margin: auto;
+  text-align: center;
+  border-color: #008CBA;
+  background-image: url("https://theysaidso.com/img/bgs/hang_on_building_top.jpg");
+  background-size: 100%; 
+  position: relative;
+}
